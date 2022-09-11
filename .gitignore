@@ -1,4 +1,4 @@
 .env
-node_module/
+node_modules/
 db/schema.sql
 .DS_store

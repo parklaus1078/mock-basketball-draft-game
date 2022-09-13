@@ -6,7 +6,7 @@ const routes = require("./src/routes");
 const createApp = () => {
     const globalErrorHandler = (err, req, res, next) => {
         err.statusCode = err.statusCode || 500;
-        res.status(err.statusCode).json({ message: err.message })
+        res.status(err.statusCode).json({ message: err.message });
     };
 
     const app = express();

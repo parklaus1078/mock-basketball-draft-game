@@ -4,7 +4,7 @@ dotenv.config();
 const { createApp } = require("./app");
 const { appDataSource } = require("./src/utils/dataSource");
 
-const start = async () => {
+const startServer = async () => {
     try {
         const PORT = process.env.PORT;
         const app = createApp();
@@ -30,4 +30,4 @@ const start = async () => {
     }
 };
 
-start();
+startServer();

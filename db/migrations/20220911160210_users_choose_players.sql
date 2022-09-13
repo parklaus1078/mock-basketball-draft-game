@@ -5,8 +5,8 @@ CREATE TABLE users_choose_players(
     player_id INT NOT NULL,
     nth_choice INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_users_choose_players_user_id FOREIGN KEY (user_id) REFERENCES users (id),
-    CONSTRAINT fk_users_choose_players_player_id FOREIGN KEY (player_id) REFERENCES players (id)
+    CONSTRAINT fk_users_choose_players_user_id FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE cascade,
+    CONSTRAINT fk_users_choose_players_player_id FOREIGN KEY (player_id) REFERENCES players (id) ON DELETE cascade
 );
 
 -- migrate:down

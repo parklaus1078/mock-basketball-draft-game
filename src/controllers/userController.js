@@ -11,7 +11,10 @@ const postUsername = async (req, res) => {
     
         const postUsername = await userService.postUsername(username, room_id);
     
-        return res.status(201).json({message: "usernamePosted", user_id: postUsername});
+        return res.status(201).json({
+            message: "usernamePosted", 
+            user_id: postUsername
+        });
 };
 
 module.exports = {
